@@ -42,9 +42,21 @@ numberOfWordsInLine = 6
 print Text.count(" ")
 
 
-counter=0
+array = []
+string1 = " "
 
 for i in Text:
-    if i==" ":
-        counter = counter + 1
-print counter
+    
+        string1 = string1+i
+            
+        if i==" ":
+            array.append(string1)
+            string1 = ""
+
+for i in range(0,len(array)):
+    print array[:numberOfWordsInLine]
+
+                #for i in array:
+
+                # print i
+#if (
