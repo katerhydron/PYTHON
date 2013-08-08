@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 #my first python scrit
 
 multiplier = 10
