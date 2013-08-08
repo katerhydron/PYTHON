@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 #!/usr/bin/env python
 #my first python scrit
-=======
+
 def wrapper(numberOfWordsInLine):
 	#my first python scrit
 
@@ -64,5 +63,5 @@ def wrapper(numberOfWordsInLine):
 				begining = end
 				end += numberOfWordsInLine
 			
->>>>>>> f2c4360eaf41f79e7a2d462da28aa35a4db27d66
+
 
