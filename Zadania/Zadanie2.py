@@ -48,8 +48,8 @@ def ReadInfo():
     else:
         info = file.read()
 
-        autor = re.search('(?<=autor : ")\w+.*(?=")',info)
-        version = re.search('(?<=ver :ppp ")\w+.*(?=")',info)
+        autor = re.search('(?<=autor : ").*(?=")',info)
+        version = re.search('(?<=ver : ").*(?=")',info)
         release_date = re.search('(?<=rel_data : \()\d+\-\d+\-\d+',info)
 
         myArray= []
