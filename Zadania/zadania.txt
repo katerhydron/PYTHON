@@ -1,0 +1,66 @@
+1. Napisz skrypt, który pobiera podczas wykonywania skryptu, będzie wyświetlał komunikat:
+
+a) " Hi, what's your name?"   (funkcja print) 
+b) " Hi, what's your name?" , a następnie pobierał z lini komend nazwę użytkownika i wyświetlał ją w komunikacje:
+   " Nice to meet you <name>" (raw_input)
+c) punkt a) i b) opakuj w funkcję "WelcomeAndReturnName", która nie będzie zwracać zmienną imię 
+d) stwórz tablice/dictionary/listę z 10 imionami osób(dowolność) oraz przypisanymi do nich pokojami, np
+
+Ala - room 6
+Wojtek - room 2a
+
+Stwórz funkcję "CheckPermission" która przyjmie jako parametr imię zwrócone z funkcji "WelcomeAndReturnName" i sprawdzi czy dane imię znajduje się w tablicy.
+Jeśli imię znajdzie się w tablicy, funkcja powinna zwrócić wartość True i wyświetlić wiadomość "Access Granted", w innym przypadku, zwróci wartość False i wyświetli informacje "Access Denied".
+W przypadku przechowywania danych(imion i pokoi) w dictionary, użyj konstrukcji z try. Więcej informacji w Pomocy
+
+? Pomoc (try, exceptions, handle exceptions) -> http://docs.python.org/2/tutorial/errors.html
+
+d) Do funkcji "CheckPermission" dodaj funkcjonalność w której imię wstawione jako parametr będzie miało pierwszą literę zawsze dużą.
+
+? Pomoc (http://docs.python.org/2/library/stdtypes.html)
+        Warto zaznajomić się z pozostałymi opcjami, w tym zmienianie
+        zmiennych na lowercase czy uppercase
+
+
+2) Stwórz plik test2.py, który będzie przyjmował jako parametr nazwę pliku, np
+
+test2.py -i <input_file>
+
+Użyj konstrunkcji:
+if __name__ == "__main__":
+     main(sys.argv)
+
+? Pomoc - oprzyj się na przykładzie Tutorial1LoadData
+
+a) Dodaj obsługę zdażenia w którym brak parametru wywoła pomoc, w której wyjaśnione będzie że po fladze -i należy wstawić nazwę pliku.
+b) Dodaj obsługę zdażenia, w której wywołanie flagi -h wywoła wyjaśnienie, jakie flagi są obsługiwane, np
+-i <input_file> - sciezka do pliku ktory chcemy uzyc
+-h <help>       - pomoc
+
+c) Stwórz funkcję "CheckPathFile", która jako parametr wejściowy, przyjmie parametr <input_file>.
+- W jej ciele, sprawdź, czy podana ścieżka do pliku istnieje (os.path.exists), jeśli dana sciezka nie istnieje, 
+- wyswietl komunikat :
+ "Data does not exists, Please check path"
+oraz spytaj się czy użytkownik chce wpisać ponownie ścieżkę.
+"Do you want correct your path?(yes/no)"
+
+Po podaniu zmiennej "yes", powinien pojawić się komunikat
+" New Path: " oraz użytkownik, powinien mieć szanse wpisać nową ścieżkę
+
+W przypadku "no", użytkownik powinien zobaczyć napis "Bye, Bye" i skrypt powinien zakończyć swoje działanie  
+
+? Pomoc zakonczyń skrypt pythonowy można za pomocą sys.exit(0) 
+http://docs.python.org/2/library/sys.html?highlight=sys.exit#sys.exit
+
+W przypadku, gdy plik istnieje, funkcja powinna zwrócić string zawierający ścieżkę oraz nazwe do pliku
+
+d) Stwórz funkcję "ReadInfo", której celem będzie wczytanie zawartości pliku "info.txt", znajdującego się w lokalizacji skryptu (plik załączony do ćwiczeń). Brak istniejącego pliku, powinien być obsłużony, poprzez wyświetlenie komunikatu, " Lack of info.txt file".
+Za pomocą re.search, znajdz wersje skryptu, autora skryptu, release date w pliku, i zwróc te dane w postaci tablicy z funkcji.
+
+Wyswietl zawartość tablicy z lokalizacji __main__
+
+? Pomoc Regex/re wyszukiwanie stringa w tekscie http://docs.python.org/2/library/re.html
+Znaleźć lokalizację pliku można na wiele sposobów,
+http://stackoverflow.com/questions/7783308/os-path-dirname-file-returns-empty
+
+
